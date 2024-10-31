@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/app_color"
+        tools:context="repo.RegisterActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/voyage"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/voyage_image_description"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/dancing_bold"
+        android:padding="5dp"
+        android:text="@string/gestion_voyage_text"
+        android:textColor="@color/white"
+        android:textSize="50sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:padding="20dp"
+        android:background="@drawable/round_border"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/username_hint"
+            android:textColorHint="@color/app_color"
+            app:cursorColor="@color/app_color"
+            app:startIconDrawable="@drawable/baseline_account_circle_24"
+            app:hintTextColor="@color/app_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userName"
+                android:layout_width="317dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editstrock"
+                android:drawablePadding="8dp"
+                android:inputType="text"
+                android:padding="20dp"
+                app:drawableTint="@color/app_color" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_hint"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@color/app_color"
+            app:cursorColor="@color/app_color"
+            app:startIconDrawable="@drawable/baseline_alternate_email_24"
+            app:hintTextColor="@color/app_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userEmail"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editstrock"
+                android:drawablePadding="8dp"
+                android:inputType="textEmailAddress"
+                android:padding="20dp"
+
+                app:drawableTint="@color/app_color" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/password_hint"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/icon_color"
+            app:hintTextColor="@color/app_color"
+            app:passwordToggleEnabled="true"
+            app:cursorColor="@color/app_color"
+            android:textColorHint="@color/app_color"
+            app:passwordToggleTint="@color/icon_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mot_de_passe"
+                android:layout_width="323dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editstrock"
+                android:drawablePadding="8dp"
+                android:inputType="textPassword"
+                android:padding="20dp"
+                app:drawableTint="@color/app_color"
+                app:startIconDrawable="@drawable/baseline_compass_calibration_24" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:backgroundTint="@color/button_color"
+            android:padding="20dp"
+            android:text="@string/register_button_text"
+            android:textColor="@color/black"
+            android:fontFamily="@font/dm_medium"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            app:cornerRadius="30dp"
+            android:textAllCaps="true"
+            android:minHeight="3dp"
+            android:minWidth="3dp"
+            android:onClick="creerUser"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:padding="5dp"
+                android:text="@string/already_have_account_text"
+                android:fontFamily="@font/dm_medium"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:minHeight="48dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

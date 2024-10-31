@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_color"
+    android:padding="20dp"
+    tools:context="repo.ReserveHotelActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/reservation"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/reservation_image_description"
+        android:minHeight="48dp"/>
+
+    <LinearLayout
+        android:id="@+id/titre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="20dp"
+            android:onClick="back"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:contentDescription="@string/back_arrow_description"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            />
+
+        <TextView
+            android:id="@+id/titre_reservation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_medium"
+            android:text="@string/reserve_hotels"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="4dp"
+        android:textColor="@color/white"
+        android:text="@string/date_hint" />
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:autofillHints="postalAddress"
+        android:background="@color/white"
+        android:hint="@string/date_format_hint"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:focusable="true"
+        android:clickable="true" />
+
+    <EditText
+        android:id="@+id/nbjours"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:hint="@string/nbJours"
+        android:layout_marginTop="20dp"
+        android:inputType="date"
+        android:autofillHints="date"
+        android:background="@color/white"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="4dp"
+        android:textColor="@color/white"
+        android:text="@string/room_type" />
+
+    <Spinner
+        android:id="@+id/roomType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:entries="@array/roomtype"
+        android:background="@color/white"
+        android:hint="@string/room_type"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/buttonReserve"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:backgroundTint="@color/button_color"
+        android:text="@string/reserve_button_text"
+        android:onClick="Reserver" />
+
+</LinearLayout>
